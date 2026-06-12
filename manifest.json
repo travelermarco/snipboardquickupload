@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "Snipboard Quick Upload",
+  "version": "1.2.0",
+  "description": "Fai uno screenshot, clicca il pulsante, ottieni il link Snipboard.io negli appunti in un secondo.",
+  "permissions": [
+    "clipboardRead",
+    "clipboardWrite",
+    "scripting",
+    "tabs",
+    "webNavigation",
+    "storage"
+  ],
+  "host_permissions": [
+    "https://snipboard.io/*",
+    "https://i.snipboard.io/*",
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["content.js"],
+      "run_at": "document_end",
+      "all_frames": false,
+      "exclude_matches": ["https://snipboard.io/*"]
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "Snipboard Quick Upload"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
