@@ -1,5 +1,7 @@
 # Snipboard Quick Upload
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?logo=open-source-initiative&logoColor=white)](LICENSE)
+
 Chrome extension that uploads the image in your clipboard to [Snipboard.io](https://snipboard.io) with a single click and copies the resulting link automatically.
 
 No website to open. No drag-and-drop. Just click the button.
